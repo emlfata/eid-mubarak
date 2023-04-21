@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Greeting</title>
+  <script type="text/javascript">
+    function tosubmit() {
+      var mytext = document.getElementById("text").value;
+
+      localStorage.setItem("text", mytext);
+
+      return true;
+    }
+
+  </script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      background-color: #0A4D68;
+      color: white;
+    }
+
+    body {
+      font-family: "Inter", sans-serif;
+    }
+
+    .greeting-main-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 48px;
+    }
+
+    .greeting-form-wrapper {
+      margin: 0 auto;
+      max-width: 550px;
+      width: 100%;
+      background: white;
+    }
+
+    .greeting-form-input {
+      width: 100%;
+      padding: 13px 22px;
+      border-radius: 6px;
+      border: 1px solid #DDE3EC;
+      background: white;
+      font-weight: 500;
+      font-size: 16px;
+      color: #536387;
+      outline: none;
+      resize: none;
+    }
+
+    .greeting-form-input:focus {
+      border-color: #6a64f1;
+      box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .greeting-form {
+      display: flex;
+      gap: 15px;
+    }
+
+    .greeting-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 16px;
+      border-radius: 5px;
+      padding: 13px 25px;
+      border: none;
+      font-weight: 500;
+      background-color: #6A64F1;
+      color: white;
+      cursor: pointer;
+    }
+
+    .greeting-btn:hover {
+      box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="greeting-main-wrapper">
+    <div class="greeting-form-wrapper">
+      <h1>Assalamu'alaikum</h1>
+      <p style="padding-bottom: 30px;">Masukkan Nama Kamu:</p>
+      <form name="myform" onSubmit="tosubmit();" action="./response.html">
+        <div class="greeting-form">
+          <input type="text" id="text" placeholder="Enter your name" class="greeting-form-input" />
+
+          <button class="greeting-btn">
+            Enter
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>

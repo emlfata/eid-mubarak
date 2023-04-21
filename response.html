@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Eid Mubarak</title>
+    <script>
+        var i = 0;
+        var speed = 200;
+        function init() {
+            var mytext = localStorage.getItem("text");
+            document.getElementById("body").innerHTML = mytext;
+            if (i < mytext.length) {
+                document.getElementById("name").innerHTML += mytext.charAt(i);
+                i++;
+                setTimeout(init, speed);
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0A4D68;
+            text-align: center;
+        }
+
+        h3 {
+            color: white;
+            font-size: 40px;
+        }
+
+        p {
+            color: lightgray;
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body onLoad="init();">
+    <div id="body" style="display: none;"></div>
+    <h3>Halo <span id="name"></span></h3>
+
+    <p>Selamat Hari Raya Idul Fitri 1444 H</p>
+    <p>Taqabbalallahu Minna Wa Minkum</p>
+    <p>Mohon Maaf Lahir dan Batin 🙏</p>
+</body>
+
+</html>
